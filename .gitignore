@@ -6,3 +6,6 @@ venv/
 .pytest_cache/
 *.egg-info/
 .DS_Store
+paper_portfolio.json
+alerts.json
+finance_data.json

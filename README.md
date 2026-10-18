@@ -25,13 +25,25 @@ it live to clients over a WebSocket — with links back to the original source.
   insider-ownership form; acquisition/guidance keywords bump the score.
 - **Grounded summaries** — extractive baseline now; LLM-with-citations later.
 
+## Dashboard
+
+Open **http://localhost:8000/** after starting the server. The single-file
+dashboard shows three panels:
+
+- **Watchlist** — live quotes (via free Stooq feed), add your own tickers.
+- **Live Feed** — filings & news streaming in over WebSocket, with a materiality
+  slider, sentiment, ticker chips, and links to the source.
+- **Paper Portfolio** — placeholder for the upcoming paper-trading simulator
+  (virtual cash, simulated buy/sell, live P&L) and backtester.
+
 ## Sources
 
 | Source | Status | Key needed |
 |--------|--------|-----------|
 | **SEC EDGAR** (latest filings) | ✅ real (Milestone 2) | none |
+| **Stooq** (stock quotes) | ✅ real, keyless (dashboard) | none |
 | Mock generator | ✅ built-in demo | none |
-| News API / market data | 🔜 Milestone 3 | yes |
+| News API | 🔜 later | yes |
 
 EDGAR is the first real source: it polls the public "latest filings" Atom feed,
 dedupes entries, and resolves each filing's CIK to a ticker. It needs **no API
